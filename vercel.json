@@ -1,0 +1,10 @@
+{
+  "installCommand": "npm install --omit=dev --no-audit --no-fund",
+  "crons": [
+    {
+      "path": "/api/desk-refresh",
+      "schedule": "*/5 * * * *"
+    }
+  ]
+}
+
