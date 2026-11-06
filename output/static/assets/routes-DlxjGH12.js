@@ -1,0 +1,1 @@
+import{n as e,r as t,t as n}from"./index-B9VDuWAH.js";var r=t();function i(){let[t,i]=n.useLoaderData();return(0,r.jsx)(e,{initial:t,initialNews:i})}export{i as component};
