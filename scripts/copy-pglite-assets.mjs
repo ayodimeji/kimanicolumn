@@ -8,7 +8,9 @@ import { copyFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
 const srcDir = join("node_modules", "@electric-sql", "pglite", "dist");
-const destDir = join(".vercel", "output", "functions", "__server.func", "_libs");
+const destDir = process.env.NETLIFY
+  ? join(".netlify", "functions-internal", "server", "_libs")
+  : join(".vercel", "output", "functions", "__server.func", "_libs");
 const files = ["pglite.data", "pglite.wasm", "initdb.wasm"];
 
 if (!existsSync(destDir)) {
